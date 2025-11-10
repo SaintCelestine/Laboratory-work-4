@@ -1,0 +1,16 @@
+name: SQL Linter
+on:
+  push:
+    branches: [ main ]  # або інша твоя гілка
+jobs:
+  sql_linter:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Install SQLFluff
+      run: pip install sqlfluff
+    - name: Run SQLFluff Linter
+      run: |
+        echo "Перевірка SQL-схеми даних..."
+        sqlfluff lint DataSchema.sql --dialect postgres
