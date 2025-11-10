@@ -90,10 +90,10 @@ CREATE TABLE recommendation (
     CHECK ((parameter_id IS NOT NULL) OR (analysis_id IS NOT NULL))
 );
 
-CREATE INDEX idx_history_profile_date ON health_history (profile_id, record_date);
-CREATE INDEX idx_param_history ON vital_parameter (history_id);
-CREATE INDEX idx_param_sensor ON vital_parameter (sensor_id);
-CREATE INDEX idx_audio_session ON audio_record (session_id);
-CREATE INDEX idx_analysis_audio ON pitch_analysis (audio_id);
-CREATE INDEX idx_feedback_profile ON visual_feedback (profile_id);
-CREATE INDEX idx_recommendation_profile ON recommendation (profile_id);
+CREATE INDEX idx_hist_prof_date ON health_history (profile_id, record_date);
+CREATE INDEX idx_param_hist ON vital_parameter (history_id);
+CREATE INDEX idx_param_sens ON vital_parameter (sensor_id);
+CREATE INDEX idx_audio_sess ON audio_record (session_id);
+CREATE INDEX idx_anlys_aud ON pitch_analysis (audio_id);
+CREATE INDEX idx_feed_prof ON visual_feedback (profile_id);
+CREATE INDEX idx_rec_prof ON recommendation (profile_id);
