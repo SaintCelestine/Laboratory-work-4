@@ -1,4 +1,4 @@
-name: Data Schema Code Convention (SQL)
+name: SQL Linter
 on:
   push:
     branches: [ main ]
