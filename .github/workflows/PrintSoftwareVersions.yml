@@ -12,8 +12,6 @@ jobs:
         run: node --version
       - name: Check Python version
         run: python3 --version
-      - name: Check Docker version
-        run: docker --version
   DatabaseSoftware:
     runs-on: ubuntu-latest
     steps:
