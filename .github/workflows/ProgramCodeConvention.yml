@@ -12,5 +12,5 @@ jobs:
         uses: github/super-linter@v4
         env:
           VALIDATE_PYTHON: true
-          FILTER_REGEX_INCLUDE: .*/ProgramCode.py
+          FILTER_REGEX_INCLUDE: ./*.py
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
